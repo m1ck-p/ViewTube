@@ -1,0 +1,85 @@
+button {
+  height: auto;
+  width: auto;
+  outline: none;
+  margin: 2px;
+  border: none;
+  border-radius: 2px;
+}
+
+button.current {
+  box-shadow: 0 0 0 2px red,
+              0 0 0 4px black;
+              border: 10px solid;
+}
+
+/* ytbe */
+
+div#percent-bar-likes::before {
+    border: 10px solid #fff;
+    content: '';
+}
+
+/* amzn */
+
+.go-btn-active {
+    color: #0000 !important;
+}
+
+button#changeColor::before {
+    border-radius: 1em;
+    width: calc(1em - 2px);
+    height: calc(1em - 2px);
+    display: block;
+    content: '';
+    position: absolute;
+    top: -1px;
+}
+
+button#changeColor:not(.go-btn-active)::before {
+    left: -1px;
+    background-color: #a0a0a0;
+}
+
+button#changeColor.go-btn-active::before {
+    right: -1px;
+    background-color: #ffffff;
+}
+
+button#changeColor {
+    border-radius: 1em;
+    width: calc(2.3em - 4px);
+    height: 1em;
+    position: relative;
+    left: 0;
+    top: 0;
+    color: #0000 !important;
+}
+
+button#changeColor:not(.go-btn-active) {
+    border: 2px solid #d5d5d5 !important;
+    background-color: #d5d5d5 !important;
+}
+
+button#changeColor.go-btn-active {
+    border: 2px solid #ccc !important;
+    border: 2px solid #74d05e !important;
+    
+    background-color: #ccc !important;
+    background-color: #74d05e !important;
+}
+
+button#changeColor.false {
+    display: none !important;
+}
+
+/* .a-box.shipment.shipment-is-delivered.returnable-wrapper::before {
+    content: '> returnable until 01.12.2022';
+    position: absolute;
+    transform: translate(-100%);
+    font-size: 18px !important;
+    line-height: 24px!important;
+    padding: 14px 18px;
+    background: cornflowerblue;
+    color: #fff;
+} */
