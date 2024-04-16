@@ -1,0 +1,124 @@
+:root {
+    --btn-on-color: #74d05e !important;
+    --btn-on-hover-color: #9fe88d !important;
+    --btn-on-before-color: #fff !important;
+    --btn-on-hover-before-color: #f5fff2 !important; /* #f7fcff #f5fff2 #6ab957 */
+    --btn-off-color: #d5d5d5 !important;
+    --btn-off-hover-color: #ddd !important;
+    --btn-off-before-color: #a0a0a0 !important;
+    --btn-off-hover-before-color: #ccc !important;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    height: auto;
+    width: auto;
+    outline: none;
+    margin: 2px;
+    border: none;
+    border-radius: 2px;
+}
+
+button.current {
+    box-shadow: 0 0 0 2px red,
+    0 0 0 4px black;
+    border: 10px solid;
+}
+
+/* ytbe */
+
+div#percent-bar-likes::before {
+    border: 10px solid #fff;
+    content: '';
+}
+
+/* amzn */
+
+.go-btn-active {
+    color: #0000 !important;
+}
+
+/* btn */
+
+button#toggle-button {
+    border-radius: 1em;
+    width: calc(2.3em - 4px);
+    height: 1em;
+    position: relative;
+    left: 0;
+    top: 0;
+    color: #0000 !important;
+    transition: all .2s;
+}
+
+button#toggle-button.go-btn-active {
+    border: 2px solid var(--btn-on-color);
+    background-color: var(--btn-on-color);
+}
+
+button#toggle-button:not(.go-btn-active) {
+    border: 2px solid var(--btn-off-color);
+    background-color: var(--btn-off-color);
+}
+
+/* btn:hover */
+
+button#toggle-button:hover {
+    cursor: pointer;
+}
+
+button#toggle-button.go-btn-active:hover {
+    background-color: var(--btn-on-hover-color);
+    border-color: var(--btn-on-hover-color);
+}
+
+button#toggle-button:not(.go-btn-active):hover {
+    background-color: var(--btn-off-hover-color);
+    border-color: var(--btn-off-hover-color);
+}
+
+/* btn::before */
+
+button#toggle-button::before {
+    border-radius: 1em;
+    width: calc(1em - 2px);
+    height: calc(1em - 2px);
+    display: block;
+    content: '';
+    position: absolute;
+    top: -1px;
+    transition: all .2s;
+}
+
+button#toggle-button.go-btn-active::before {
+    right: -1px;
+    background-color: var(--btn-on-before-color);
+}
+
+button#toggle-button:not(.go-btn-active)::before {
+    left: -1px;
+    background-color: var(--btn-off-before-color);
+}
+
+/* btn:hover::before */
+
+button#toggle-button.go-btn-active:hover::before {
+    right: -1px;
+    background-color: var(--btn-on-hover-before-color);
+}
+
+button#toggle-button:not(.go-btn-active):hover::before {
+    left: -1px;
+    background-color: var(--btn-off-hover-before-color);
+}
+
+/* other */
+
+button#toggle-button.false {
+    display: none !important;
+}

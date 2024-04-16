@@ -1,0 +1,46 @@
+#percent-wrapper {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end;
+
+    /*margin-top: 1em;
+    width: 102px;
+    height: calc(1em - 2px);
+    background-color: white;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+    gap: 2px; */
+
+}
+
+#percent-bar {
+    margin-top: 1em; 
+    width: 102px; 
+    height: calc(1em - 2px); 
+    background-color: white; 
+    border-radius: 2px; 
+    display: flex; 
+    gap: 2px;
+}
+
+#percent-bar-likes {
+    height: calc(1em - 1px); 
+    background-color: #ff95d5;
+}
+
+#percent-bar-views {
+    height: calc(1em - 1px); 
+    background-color: #e2d1e1; 
+}
+
+#percent-text {
+    margin-top: .25em; 
+    text-align: left;
+    width: 7em;
+}
+
+/* #percent {
+
+} */

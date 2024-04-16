@@ -1,28 +1,31 @@
 {
-  "name": "YT Basic Views to Likes Ratio",
-  "description": "Visualization of views in rel. to likes for a youtube video",
+  "manifest_version": 3,
+  "name": "ViewTube - Views to Likes Ratio",
+  "description": "Visualization of a youtube video's amount of views vs. likes.",
   "version": "1.0",
-  "manifest_version": 3, 
+  "permissions": [
+    "storage", 
+    "activeTab", 
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "img/16_icon.png",
+      "32": "img/32_icon.png",
+      "48": "img/48_icon.png",
+      "64": "img/64_icon.png",
+      "128": "img/128_icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      // "js": ["js-min_27-10-22.js", "content.js"]
-      "js": ["js-min_27-10-22.js"],
-      "css": ["main.css"]
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["js/ElementManager.js", "js/content.js"],
+      "css": ["css/content.css"]
     }
-    // , {- same with "matches": ["https://amazon*"] etc.}
-  ],
-  
-  //"content_security_policy": {"extension_pages": "script-src 'self' https://ajax.googleapis.com 'unsafe-eval'; object-src 'self'"},  
-  "background": {
-      //"script": "js-min_27-10-22.js",
-      "script": "https://code.jquery.com/jquery-latest.min.js",
-    "service_worker": "main.js"
-  },
-  "permissions": ["storage", "activeTab", "scripting"],
-  "action": {
-    "default_popup": "index.html"
-  }
+  ]
 }
