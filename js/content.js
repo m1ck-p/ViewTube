@@ -57,7 +57,7 @@ function extractViews(input) {
 
 function createOrRemoveElements(isEnabled) {
 
-    /*  as per now, the area displaying amount of likes is at the video's "like" button.
+    /*  as per now, the area displaying amount of likes is at the video's 'like' button.
         however, css classes and structure have changed (and likely will keep doing so, which is this plugin's greatest flaw)
         '.view-count' -> '.yt-spec-button-view-model'
         'yt-formatted-string[aria-label*="like"]' -> '.yt-spec-button-view-model > button[aria-label*="like this video along with"]'

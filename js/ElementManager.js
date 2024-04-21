@@ -8,7 +8,8 @@ class ElementManager {
     // for creating new elements
     createElement(
         type = 'div', 
-        id = '', title = '', 
+        id = '', 
+        title = '', 
         referenceElId, 
         insertMode = 'insertAfter', 
         width = '', 

@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === "toggle") { // "doToggleExtension" / "toggle"
+  if (request.action === 'toggle') { // 'doToggleExtension' / 'toggle'
     isExtensionEnabled = !isExtensionEnabled;
     chrome.storage.sync.set({ isExtensionEnabled });
     sendResponse({ isExtensionEnabled });
